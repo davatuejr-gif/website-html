@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DavaEkaRusdianto — Materi Kapasitor</title>
+<style>
+:root{
+  --bg:#f4f7fb; --card:#fff; --text:#182230; --muted:#5d6b7c;
+  --primary:#3157d5; --secondary:#e9efff; --border:#dce3ee;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+header{background:linear-gradient(135deg,#162d72,#3157d5);color:white;padding:56px 20px;text-align:center}
+header h1{margin:0 0 8px;font-size:clamp(32px,7vw,56px)}
+header p{margin:0;opacity:.9}
+nav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--border);display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:10px}
+nav a{text-decoration:none;color:var(--primary);font-weight:700;padding:8px 12px;border-radius:999px}
+nav a:hover{background:var(--secondary)}
+main{max-width:1050px;margin:auto;padding:28px 18px 60px}
+section{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:26px;margin:18px 0;box-shadow:0 8px 25px rgba(30,50,90,.06)}
+h2{margin-top:0;color:#203b91}
+h3{color:#294aa8}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.box{background:#f7f9ff;border:1px solid var(--border);border-radius:14px;padding:18px}
+.formula{font-size:1.25rem;text-align:center;background:#eef3ff;padding:18px;border-radius:12px;font-weight:700;color:#18327e}
+table{width:100%;border-collapse:collapse;margin-top:12px}
+th,td{border:1px solid var(--border);padding:10px;text-align:left}
+th{background:#eef3ff}
+.example{border-left:5px solid var(--primary);padding:15px 18px;background:#f7f9ff;border-radius:8px}
+.quiz button{border:0;background:var(--primary);color:white;padding:10px 16px;border-radius:9px;cursor:pointer}
+.answer{display:none;margin-top:12px;background:#edf7ed;padding:12px;border-radius:8px}
+footer{text-align:center;padding:28px;background:#17254b;color:white}
+small{color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <h1>DavaEkaRusdianto</h1>
+  <p>Media pembelajaran fisika — Kapasitor</p>
+</header>
+
+<nav>
+  <a href="#pengantar">Pengantar</a>
+  <a href="#konsep">Konsep</a>
+  <a href="#rumus">Rumus</a>
+  <a href="#rangkaian">Rangkaian</a>
+  <a href="#energi">Energi</a>
+  <a href="#contoh">Contoh</a>
+  <a href="#kuis">Kuis</a>
+</nav>
+
+<main>
+<section id="pengantar">
+<h2>1. Apa Itu Kapasitor?</h2>
+<p>Kapasitor adalah komponen listrik yang dapat menyimpan energi dalam bentuk medan listrik. Kapasitor biasanya terdiri dari dua penghantar yang dipisahkan oleh bahan isolator yang disebut <b>dielektrik</b>.</p>
+<div class="grid">
+  <div class="box"><b>Fungsi utama</b><br>Menyimpan dan melepaskan muatan listrik.</div>
+  <div class="box"><b>Satuan</b><br>Farad (F), dengan satuan turunan µF, nF, dan pF.</div>
+  <div class="box"><b>Contoh penggunaan</b><br>Filter catu daya, rangkaian pewaktu, kamera, dan sistem elektronik.</div>
+</div>
+</section>
+
+<section id="konsep">
+<h2>2. Bagaimana Kapasitor Bekerja?</h2>
+<p>Saat kapasitor dihubungkan ke sumber tegangan, elektron berpindah sehingga salah satu keping memiliki kelebihan elektron dan keping lainnya kekurangan elektron. Perbedaan muatan ini menghasilkan beda potensial dan medan listrik di antara kedua keping.</p>
+<div class="formula">Q = C × V</div>
+<p><b>Q</b> = muatan listrik (coulomb), <b>C</b> = kapasitansi (farad), <b>V</b> = tegangan (volt).</p>
+</section>
+
+<section id="rumus">
+<h2>3. Kapasitansi Kapasitor Keping Sejajar</h2>
+<p>Untuk kapasitor keping sejajar, nilai kapasitansi dipengaruhi oleh luas keping, jarak antarkeping, dan bahan dielektriknya.</p>
+<div class="formula">C = ε × A / d</div>
+<div class="grid">
+<div class="box"><b>C</b> = kapasitansi (F)</div>
+<div class="box"><b>ε</b> = permitivitas bahan (F/m)</div>
+<div class="box"><b>A</b> = luas keping (m²)</div>
+<div class="box"><b>d</b> = jarak antarkeping (m)</div>
+</div>
+</section>
+
+<section id="rangkaian">
+<h2>4. Kapasitor dalam Rangkaian</h2>
+<h3>Paralel</h3>
+<p>Pada rangkaian paralel, tegangan pada setiap kapasitor sama.</p>
+<div class="formula">C<sub>total</sub> = C₁ + C₂ + C₃ + …</div>
+<h3>Seri</h3>
+<p>Pada rangkaian seri, muatan pada kapasitor-kapasitor ideal memiliki besar yang sama.</p>
+<div class="formula">1/C<sub>total</sub> = 1/C₁ + 1/C₂ + 1/C₃ + …</div>
+</section>
+
+<section id="energi">
+<h2>5. Energi yang Tersimpan</h2>
+<p>Kapasitor yang sudah terisi menyimpan energi pada medan listriknya.</p>
+<div class="formula">E = ½ C V²</div>
+<p>Energi <b>E</b> dinyatakan dalam joule (J).</p>
+</section>
+
+<section id="contoh">
+<h2>6. Contoh Soal</h2>
+<div class="example">
+<b>Soal:</b> Sebuah kapasitor memiliki kapasitansi 4 µF dan diberi tegangan 12 V. Berapa muatan yang tersimpan?
+<br><br>
+<b>Penyelesaian:</b><br>
+Q = C × V<br>
+Q = 4 × 10⁻⁶ × 12<br>
+<b>Q = 48 × 10⁻⁶ C = 48 µC</b>
+</div>
+<br>
+<div class="example">
+<b>Contoh kedua:</b> Dua kapasitor 2 µF dan 3 µF disusun paralel. Kapasitansi totalnya:
+<br><br>
+C<sub>total</sub> = 2 + 3 = <b>5 µF</b>.
+</div>
+</section>
+
+<section>
+<h2>7. Hal yang Perlu Diingat</h2>
+<table>
+<tr><th>Situasi</th><th>Kesimpulan</th></tr>
+<tr><td>Kapasitor paralel</td><td>Kapasitansi total dijumlahkan.</td></tr>
+<tr><td>Kapasitor seri</td><td>Gunakan kebalikan kapasitansi lalu jumlahkan.</td></tr>
+<tr><td>Tegangan makin besar</td><td>Muatan Q bertambah jika C tetap.</td></tr>
+<tr><td>Luas keping makin besar</td><td>Kapasitansi cenderung makin besar.</td></tr>
+<tr><td>Jarak keping makin besar</td><td>Kapasitansi cenderung makin kecil.</td></tr>
+</table>
+</section>
+
+
+
+<section id="simulator">
+<h2>9. Menentukan Kapasitansi dengan Rumus C = Q / V</h2>
+<p>Nilai kapasitansi dapat dicari dari perbandingan antara muatan listrik <b>Q</b> dan tegangan <b>V</b>.</p>
+<div class="formula">C = Q / V</div>
+
+<div class="grid">
+  <div class="box">
+    <h3>Q — Muatan</h3>
+    <p>Jumlah muatan listrik yang tersimpan pada kapasitor. Satuannya adalah <b>coulomb (C)</b>.</p>
+  </div>
+  <div class="box">
+    <h3>V — Tegangan</h3>
+    <p>Beda potensial yang diberikan pada kapasitor. Satuannya adalah <b>volt (V)</b>.</p>
+  </div>
+  <div class="box">
+    <h3>C — Kapasitansi</h3>
+    <p>Kemampuan kapasitor menyimpan muatan. Satuannya adalah <b>farad (F)</b>.</p>
+  </div>
+</div>
+
+<div class="box" style="margin-top:18px">
+  <h3>Kalkulator C = Q / V</h3>
+  <div class="grid">
+    <label>
+      Muatan Q (coulomb)
+      <input id="qInput" type="number" min="0" step="any" value="0.000024"
+        style="width:100%;padding:12px;margin-top:7px;border:1px solid #dce3ee;border-radius:9px;font-size:16px">
+    </label>
+    <label>
+      Tegangan V (volt)
+      <input id="vInput" type="number" min="0.000001" step="any" value="12"
+        style="width:100%;padding:12px;margin-top:7px;border:1px solid #dce3ee;border-radius:9px;font-size:16px">
+    </label>
+  </div>
+  <div id="calcResult" class="formula" style="margin-top:18px">C = 2 µF</div>
+  <small>Contoh awal: Q = 24 µC = 0,000024 C dan V = 12 V, sehingga C = 2 µF.</small>
+</div>
+</section>
+
+<section id="jenis-kapasitor">
+<h2>10. Beberapa Jenis Kapasitor</h2>
+<p>Setiap kapasitor dapat memiliki bentuk, bahan, dan penggunaan yang berbeda. Berikut beberapa contoh yang umum dijumpai.</p>
+
+<div class="grid">
+  <div class="box">
+    <div style="height:150px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:12px;background:#fff">
+      <img src="https://kitsguru.com/cdn/shop/files/270pFCeramicCapacitor_2048x2048.jpg?v=1717244207"
+           alt="Foto kapasitor keramik asli" style="max-width:100%;max-height:145px;object-fit:contain">
+    </div>
+    <h3>Kapasitor Keramik</h3>
+    <p>Berukuran relatif kecil dan banyak digunakan pada rangkaian elektronik. Cocok untuk penyaringan dan rangkaian frekuensi tinggi.</p>
+    <p><b>Biasanya digunakan di:</b> rangkaian digital, filter, decoupling catu daya, dan rangkaian frekuensi tinggi.</p>
+  </div>
+
+  <div class="box">
+    <div style="height:150px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:12px;background:#fff">
+      <img src="https://res.cloudinary.com/rsc/image/upload/w_1024/F7111475-01"
+           alt="Foto kapasitor elektrolit asli" style="max-width:100%;max-height:145px;object-fit:contain">
+    </div>
+    <h3>Kapasitor Elektrolit</h3>
+    <p>Biasanya memiliki nilai kapasitansi lebih besar. Memiliki polaritas sehingga pemasangannya harus memperhatikan kutub positif dan negatif.</p>
+    <p><b>Biasanya digunakan di:</b> power supply, adaptor, amplifier, dan rangkaian untuk meratakan tegangan DC.</p>
+  </div>
+
+  <div class="box">
+    <div style="height:150px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:12px;background:#fff">
+      <img src="https://i0.wp.com/www.pbase.com/daverichards/image/144118691/original.jpg"
+           alt="Foto kapasitor variabel asli" style="max-width:100%;max-height:145px;object-fit:contain">
+    </div>
+    <h3>Kapasitor Variabel</h3>
+    <p>Nilai kapasitansinya dapat diubah dengan memutar poros atau mekanisme pengatur. Perubahan kapasitansi mengubah karakteristik rangkaian resonansi.</p>
+    <p><b>Biasanya digunakan di:</b> radio tuner, rangkaian RF, osilator, filter yang dapat disetel, dan matching antena.</p>
+  </div>
+
+  <div class="box">
+    <div style="height:150px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:12px;background:#fff">
+      <img src="https://static.wixstatic.com/media/8e7409_423023f579ba41dba09c03bdd51ec4ee~mv2.jpg"
+           alt="Foto kapasitor film asli" style="max-width:100%;max-height:145px;object-fit:contain">
+    </div>
+    <h3>Kapasitor Film</h3>
+    <p>Menggunakan bahan film sebagai dielektrik. Dikenal stabil dan digunakan dalam berbagai rangkaian elektronik.</p>
+    <p><b>Biasanya digunakan di:</b> rangkaian audio, filter, timing, snubber, dan rangkaian AC yang membutuhkan kestabilan.</p>
+  </div>
+</div>
+<p style="margin-top:16px"><small><b>Catatan:</b> Kapasitor variabel umumnya dipakai untuk penyetelan frekuensi dan pencocokan impedansi pada rangkaian RF. Pada kapasitor mekanis, perubahan posisi pelat mengubah kapasitansinya.</small></p>
+</section>
+
+<section>
+<h2>11. Cara Membaca Perhitungan</h2>
+<div class="example">
+<b>Contoh:</b> Sebuah kapasitor menyimpan muatan 60 µC ketika diberi tegangan 15 V.
+<br><br>
+Ubah muatan ke coulomb:<br>
+Q = 60 µC = 60 × 10⁻⁶ C
+<br><br>
+Masukkan ke rumus:<br>
+C = Q / V<br>
+C = (60 × 10⁻⁶) / 15<br>
+<b>C = 4 × 10⁻⁶ F = 4 µF</b>
+</div>
+</section>
+
+<section id="kuis" class="quiz">
+<h2>8. Kuis Singkat</h2>
+<p><b>1.</b> Apa satuan SI untuk kapasitansi?</p>
+<button onclick="show('a1')">Lihat jawaban</button>
+<div id="a1" class="answer">Farad (F).</div>
+<p><b>2.</b> Jika C = 5 µF dan V = 10 V, berapa Q?</p>
+<button onclick="show('a2')">Lihat jawaban</button>
+<div id="a2" class="answer">Q = C × V = 5 × 10 = 50 µC.</div>
+<p><b>3.</b> Bagaimana cara mencari kapasitansi total kapasitor paralel?</p>
+<button onclick="show('a3')">Lihat jawaban</button>
+<div id="a3" class="answer">Semua kapasitansi dijumlahkan: Ctotal = C₁ + C₂ + …</div>
+</section>
+</main>
+
+<footer>
+  <b>DavaEkaRusdianto</b><br>
+  <small style="color:#dbe3ff">Materi pembelajaran fisika: Kapasitor</small>
+</footer>
+
+<script>
+function show(id){
+  const el=document.getElementById(id);
+  el.style.display=el.style.display==='block'?'none':'block';
+}
+
+const qInput=document.getElementById('qInput');
+const vInput=document.getElementById('vInput');
+const calcResult=document.getElementById('calcResult');
+
+function updateCapacitance(){
+  const q=Number(qInput.value);
+  const v=Number(vInput.value);
+  if(!Number.isFinite(q) || !Number.isFinite(v) || q<0 || v<=0){
+    calcResult.textContent='Masukkan Q ≥ 0 dan V > 0';
+    return;
+  }
+  const cFarad=q/v;
+  const cMicro=cFarad*1000000;
+  const display=cMicro >= 0.001 && cMicro < 100000000
+    ? cMicro.toLocaleString('id-ID',{maximumFractionDigits:6})+' µF'
+    : cFarad.toLocaleString('id-ID',{maximumFractionDigits:9})+' F';
+  calcResult.textContent='C = '+display;
+}
+if(qInput && vInput && calcResult){
+  qInput.addEventListener('input',updateCapacitance);
+  vInput.addEventListener('input',updateCapacitance);
+  updateCapacitance();
+}
+
+const qSlider=document.getElementById('qSlider');
+const vSlider=document.getElementById('vSlider');
+const qValue=document.getElementById('qValue');
+const vValue=document.getElementById('vValue');
+const resultC=document.getElementById('resultC');
+const calculation=document.getElementById('calculation');
+
+function updateCalculator(){
+  const q=Number(qSlider.value);
+  const v=Number(vSlider.value);
+  const c=q/v;
+  qValue.textContent=q.toLocaleString('id-ID')+' µC';
+  vValue.textContent=v.toLocaleString('id-ID')+' V';
+  resultC.textContent=c.toLocaleString('id-ID',{maximumFractionDigits:2})+' µF';
+  calculation.textContent=`C = ${q.toLocaleString('id-ID')} µC ÷ ${v.toLocaleString('id-ID')} V = ${c.toLocaleString('id-ID',{maximumFractionDigits:2})} µF`;
+}
+if(qSlider && vSlider){
+  qSlider.addEventListener('input',updateCalculator);
+  vSlider.addEventListener('input',updateCalculator);
+  updateCalculator();
+}
+</script>
+</body>
+</html>
